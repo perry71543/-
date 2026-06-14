@@ -75,7 +75,6 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Categories"
           title="五大商品分類"
-          description="分類名稱與子分類皆來自 config/category_rules.yaml，不額外新增未確認分類。"
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
           {featuredCategories.map((category, index) => (
@@ -90,7 +89,6 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Products"
               title="已上架商品"
-              description={`目前已依既有分類整理 ${products.length} 件商品，商品頁可查看照片、分類與購買諮詢入口。`}
             />
             <Link
               href="/products"
