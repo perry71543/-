@@ -1,0 +1,17 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" fill="#0B0C0E"/>
+  <path d="M0 558H960V720H0V558Z" fill="#050505"/>
+  <path d="M514 143H628C652 143 672 163 672 187V220H514V143Z" fill="#111418" stroke="#DDE3EA" stroke-opacity=".3" stroke-width="6"/>
+  <path d="M650 167H759C790 167 815 192 815 223V228H650V167Z" fill="#1F2328"/>
+  <rect x="394" y="210" width="230" height="342" rx="48" fill="#0B0D0F" stroke="#F1F4F7" stroke-opacity=".26" stroke-width="6"/>
+  <rect x="429" y="326" width="160" height="112" rx="18" fill="url(#shine)"/>
+  <path d="M210 248C272 225 329 218 379 228" stroke="#D9DDE2" stroke-opacity=".22" stroke-width="10" stroke-linecap="round"/>
+  <path d="M175 315C263 292 326 289 379 304" stroke="#D9DDE2" stroke-opacity=".18" stroke-width="8" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="shine" x1="429" y1="326" x2="589" y2="438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F8FA"/>
+      <stop offset=".5" stop-color="#9FA8B2"/>
+      <stop offset="1" stop-color="#31363D"/>
+    </linearGradient>
+  </defs>
+</svg>

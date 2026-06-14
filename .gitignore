@@ -1,0 +1,14 @@
+node_modules
+.npm-cache
+.next
+out
+dist
+.DS_Store
+*.log
+coverage
+*.tsbuildinfo
+preview.csv
+report.csv
+AGENTS.md
+sort_shopee_images.py
+car-detailing-store/
