@@ -1,4 +1,8 @@
-export function formatPrice(amount: number) {
+export function formatPrice(amount?: number) {
+  if (typeof amount !== "number") {
+    return "歡迎詢價";
+  }
+
   return new Intl.NumberFormat("zh-TW", {
     style: "currency",
     currency: "TWD",

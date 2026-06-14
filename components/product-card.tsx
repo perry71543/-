@@ -33,8 +33,12 @@ export function ProductCard({ product }: ProductCardProps) {
             </span>
             <span className="text-xs font-semibold text-mist/52">{subcategory.name}</span>
           </div>
-          <h3 className="min-h-14 text-xl font-black leading-7 text-white">{product.name}</h3>
-          <p className="mt-3 min-h-16 text-sm leading-7 text-mist/64">{product.description}</p>
+          <h3 className="min-h-14 break-words text-xl font-black leading-7 text-white">
+            {product.name}
+          </h3>
+          <p className="mt-3 min-h-16 break-words text-sm leading-7 text-mist/64">
+            {product.description}
+          </p>
           <div className="mt-5 h-px bg-white/10" />
           <div className="mt-5 flex items-center justify-between gap-4">
             <p className="text-lg font-black text-white">{formatPrice(product.price)}</p>

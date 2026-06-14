@@ -1,7 +1,7 @@
 import { CategoryTile } from "@/components/category-tile";
 import { SectionHeading } from "@/components/section-heading";
 import { categories } from "@/data/categories";
-import { getProductsByCategory } from "@/data/products";
+import { getProductsByCategory, products } from "@/data/products";
 
 export const metadata = {
   title: "商品分類",
@@ -36,10 +36,10 @@ export default function CategoriesPage() {
               </div>
               <div className="rounded-lg border border-white/10 bg-carbon/42 p-5">
                 <p className="text-3xl font-black text-white">
-                  {categories.filter((category) => category.slug !== "others").length}
+                  {products.length}
                 </p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-mist/45">
-                  Curated
+                  Products
                 </p>
               </div>
             </div>

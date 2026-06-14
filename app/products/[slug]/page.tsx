@@ -61,14 +61,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   {subcategory.name}
                 </span>
               </div>
-              <h1 className="mt-5 text-4xl font-black leading-tight text-white md:text-6xl">
+              <h1 className="mt-5 break-words text-4xl font-black leading-tight text-white md:text-6xl">
                 {product.name}
               </h1>
               <p className="mt-5 text-base leading-8 text-mist/72 sm:text-lg sm:leading-9">
                 {product.description}
               </p>
               <div className="mt-6 border-y border-white/12 py-5">
-                <p className="text-sm font-bold uppercase tracking-[0.18em] text-mist/45">Price</p>
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-mist/45">售價</p>
                 <p className="mt-1 text-3xl font-black text-white">{formatPrice(product.price)}</p>
               </div>
 

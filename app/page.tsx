@@ -2,24 +2,24 @@ import Link from "next/link";
 import { CategoryTile } from "@/components/category-tile";
 import { ProductCard } from "@/components/product-card";
 import { SectionHeading } from "@/components/section-heading";
-import { getFeaturedCategories } from "@/data/categories";
-import { getFeaturedProducts } from "@/data/products";
-
-const trustItems = [
-  { label: "分類來源", value: "Rules" },
-  { label: "展示品項", value: "Curated" },
-  { label: "購買諮詢", value: "Direct" }
-];
-
-const heroStats = [
-  { label: "主分類", value: "5" },
-  { label: "施工流程", value: "4" },
-  { label: "導購方式", value: "2" }
-];
+import { categories, getFeaturedCategories } from "@/data/categories";
+import { getFeaturedProducts, products } from "@/data/products";
 
 export default function HomePage() {
   const featuredCategories = getFeaturedCategories();
   const featuredProducts = getFeaturedProducts();
+  const curatedCategories = categories.filter((category) => category.slug !== "others");
+  const seriesCount = categories.reduce((total, category) => total + category.subcategories.length, 0);
+  const heroStats = [
+    { label: "主分類", value: String(curatedCategories.length) },
+    { label: "商品品項", value: String(products.length) },
+    { label: "細分類", value: String(seriesCount) }
+  ];
+  const trustItems = [
+    { label: "分類來源", value: "Rules" },
+    { label: "上架品項", value: String(products.length) },
+    { label: "購買諮詢", value: "Direct" }
+  ];
 
   return (
     <>
@@ -48,7 +48,7 @@ export default function HomePage() {
                 href="/products"
                 className="rounded-md bg-white px-5 py-3 text-sm font-black text-carbon shadow-[0_18px_48px_rgba(255,255,255,0.14)] transition hover:bg-mist"
               >
-                瀏覽精選商品
+                瀏覽全部商品
               </Link>
               <Link
                 href="/categories"
@@ -88,9 +88,9 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-7xl px-5 py-20">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <SectionHeading
-              eyebrow="Selected"
-              title="精選商品"
-              description="先以 mock data 建立展示架構，後續可接上實際商品與庫存資料。"
+              eyebrow="Products"
+              title="已上架商品"
+              description={`目前已依既有分類整理 ${products.length} 件商品，商品頁可查看照片、分類與購買諮詢入口。`}
             />
             <Link
               href="/products"

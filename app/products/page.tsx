@@ -18,7 +18,7 @@ export default function ProductsPage() {
             <SectionHeading
               eyebrow="Products"
               title="全部商品"
-              description="先以 mock data 建立商品展示，分類欄位會驗證是否存在於分類規則檔。"
+              description={`目前已依分類架構上架 ${products.length} 件商品，分類欄位皆會驗證是否存在於分類規則檔。`}
             />
             <div className="flex flex-wrap gap-2">
               {categories

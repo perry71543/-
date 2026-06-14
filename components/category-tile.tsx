@@ -27,7 +27,7 @@ export function CategoryTile({ category, productCount, index }: CategoryTileProp
           <h3 className="mt-7 text-2xl font-black text-white">{category.name}</h3>
           <p className="mt-3 text-sm leading-7 text-mist/62">{category.description}</p>
           {typeof productCount === "number" ? (
-            <p className="mt-5 text-sm font-bold text-white">{productCount} 件展示商品</p>
+            <p className="mt-5 text-sm font-bold text-white">{productCount} 件商品</p>
           ) : null}
         </div>
         <div className="mt-7 flex flex-wrap gap-2">

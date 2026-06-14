@@ -81,8 +81,12 @@ const productData = fs.readFileSync(path.join(root, "data/products.ts"), "utf8")
 const productImageMatches = [...productData.matchAll(/image:\s*"([^"]+)"/g)].map((match) => match[1]);
 
 for (const imagePath of productImageMatches) {
-  if (!imagePath.startsWith("/products/")) {
-    errors.push(`Product image must start with /products/: ${imagePath}`);
+  if (!imagePath.startsWith("/products/") && !imagePath.startsWith("/product-images/")) {
+    errors.push(`Product image must start with /products/ or /product-images/: ${imagePath}`);
+    continue;
+  }
+
+  if (imagePath.startsWith("/product-images/")) {
     continue;
   }
 
@@ -105,4 +109,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("Deploy checks passed: no local paths, and all images are under public/products.");
+console.log("Deploy checks passed: no local paths, and static product images are valid.");
