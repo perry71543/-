@@ -112,7 +112,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Trust"
             title="依流程挑品，買前先確認需求。"
-            description="商品頁保留特色、使用方式與適用情境，導購按鈕直接連到蝦皮搜尋與 LINE 詢問，不加入購物車與金流。"
+            description="商品頁保留特色、使用方式與適用情境，導購按鈕直接連到蝦皮搜尋與LINE詢問，不加入購物車與金流。"
           />
           <div className="grid gap-3 sm:grid-cols-3 md:grid-cols-1">
             {trustItems.map((item) => (

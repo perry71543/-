@@ -5,7 +5,6 @@ import { getProductsByCategory, products } from "@/data/products";
 
 export const metadata = {
   title: "商品分類",
-  description: "依照 config/category_rules.yaml 管理的洗車用品分類。"
 };
 
 export default function CategoriesPage() {
@@ -17,7 +16,6 @@ export default function CategoriesPage() {
             <SectionHeading
               eyebrow="Categories"
               title="商品分類"
-              description="所有主分類與子分類都依照分類規則檔呈現，避免在頁面中自行新增分類。"
             />
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-lg border border-white/10 bg-carbon/42 p-5">
